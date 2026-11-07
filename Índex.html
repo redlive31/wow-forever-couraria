@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101b29">
+  <title>WoW Forever | Couroaria</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <header class="cabecalho">
+      <div class="emblema">⚒️</div>
+      <div>
+        <h1>Couroaria Forever</h1>
+        <p>Planejador de fabricação • Português BR</p>
+      </div>
+    </header>
+
+    <section class="painel nivel-painel">
+      <div class="linha">
+        <h2>Nível da profissão</h2>
+        <span id="nivelTexto">75 / 300</span>
+      </div>
+      <input id="nivel" type="number" min="1"
+             max="300" value="75">
+      <div class="barra">
+        <div id="progresso"></div>
+      </div>
+    </section>
+
+    <nav class="abas">
+      <button class="aba ativa" data-aba="receitas">
+        Receitas
+      </button>
+      <button class="aba" data-aba="producao">
+        Minha produção
+      </button>
+      <button class="aba" data-aba="materiais">
+        Materiais
+      </button>
+    </nav>
+
+    <main>
+      <section id="receitas" class="pagina ativa">
+        <div class="painel">
+          <h2>Catálogo de receitas</h2>
+          <input id="busca" type="search"
+                 placeholder="Pesquisar receita...">
+          <label class="opcao">
+            <input id="mostrarTodas" type="checkbox">
+            Mostrar receitas acima do meu nível
+          </label>
+          <p id="contador" class="secundario"></p>
+          <div id="catalogo" class="catalogo"></div>
+        </div>
+      </section>
+
+      <section id="producao" class="pagina">
+        <div class="painel">
+          <div class="linha">
+            <h2>Minha produção</h2>
+            <span id="totalItens" class="etiqueta">0 itens</span>
+          </div>
+          <div id="listaProducao"></div>
+          <button id="limpar" class="botao perigo">
+            Limpar produção
+          </button>
+        </div>
+      </section>
+
+      <section id="materiais" class="pagina">
+        <div class="painel">
+          <h2>Materiais necessários</h2>
+          <p class="secundario">
+            Informe seu estoque e o preço unitário.
+            Os preços são em ouro, prata e cobre.
+          </p>
+          <div id="listaMateriais"></div>
+
+          <div class="resumo">
+            <p>Custo dos materiais faltantes</p>
+            <strong id="custoFaltante">0o 0p 0c</strong>
+            <p>Valor de todos os materiais</p>
+            <strong id="custoTotal">0o 0p 0c</strong>
+          </div>
+
+          <button id="copiar" class="botao">
+            📋 Copiar lista de compras
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      Ferramenta independente para jogadores do WoW Forever.
+      Não afiliada ao servidor.
+    </footer>
+  </div>
+</body>
+</html>
